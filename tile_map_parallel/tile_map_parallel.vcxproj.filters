@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\src">
+      <UniqueIdentifier>{1c2698ed-cdeb-4968-bb6e-d982bc72f280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{7df3da46-1a53-4035-86c6-f62e87ad1684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\libmorton">
+      <UniqueIdentifier>{63fa1b36-0209-4d79-98aa-84469db32cda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\presets.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RasterMeta.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tile.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileAccessor.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileDatasetAccessor.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileMapBuilder.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileMapScheduler.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileMemoryAccessor.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TilePyramidLevel.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileResampler.h">
+      <Filter>头文件\src</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton_AVX512BITALG.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton_BMI.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton_common.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton2D.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton2D_LUTs.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton3D.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+    <ClInclude Include="libmorton\morton3D_LUTs.h">
+      <Filter>头文件\libmorton</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Tile.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileAccessor.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileDatasetAccessor.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileMapBuilder.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileMapScheduler.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileMemoryAccessor.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileResampler.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TilePyramidLevel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
