@@ -43,7 +43,7 @@ void TileMapScheduler::run() {
     int builderLevelIndex = pAccessor->getTopLevelIndex();
 
     for (const TilePyramidLevel &level: levels) {
-        if (level.tileNumY * level.tileNumY < maxThreadsNum) {
+        if (level.tileNumX * level.tileNumY < maxThreadsNum) {
             builderLevelIndex = level.levelIndex - 1;
             break;
         }
