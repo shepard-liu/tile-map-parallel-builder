@@ -12,7 +12,7 @@ using Clock = std::chrono::high_resolution_clock;
 int main() {
     const std::string datasetPath = "D:\\RS_Files\\TileTestTiff_2.tiff";
     const std::string tileMapDir = "C:\\Users\\10579\\Desktop\\Cache\\TileTestTiff_2";
-    TileMapScheduler tileMapScheduler(datasetPath, tileMapDir, 4, -1, 512, 512);
+    TileMapScheduler tileMapScheduler(datasetPath, tileMapDir, 12, -1, 512, 512);
 
     auto begin = Clock::now();
     tileMapScheduler.run();
