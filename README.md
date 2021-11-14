@@ -18,6 +18,10 @@ The entile tiling task is divided into several TileMapBuilders' work. TileMapSch
 
 To be continued...
 
+## Further thinking
+
+What if implement it with Node.js? It seems that Node is expert in IO-intensive programming.
+
 ## Parallel building test results
 
 Platform: My Laptop...
