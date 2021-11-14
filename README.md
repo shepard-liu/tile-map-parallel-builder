@@ -28,7 +28,7 @@ Building tiled pyramid to the top level (originial raster is considered as level
 |           |   12        | 258.922      | 
 
 
-| Tile Size | Threads Num | Elapsed Time |
+| Tile Size | Threads Num | Elapsed Time(s) |
 | --------- | ----------- | ------------ |
 |           |   1         | 187.004      |
 |           |   2         | 130.351      | 
