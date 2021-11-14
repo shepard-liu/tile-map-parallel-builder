@@ -4,13 +4,15 @@ Quadtree-based multi-thread tiled pyramid building algorithm.
 
 ## Core Concept
 
-The core concept of the algorithm is never reading the same tile twice from the disk. Based on that, with a little more consumption of memory, it eliminates the reading actions (from the disk) when merging lower-level tiles into an upper-level one. Building tiled pyramid is a IO-intensive task, so the actual speed-up is remarkable.
+NOTE: The ___level___ is different from TMS zoom level. In this description file, it starts with zero on the tiles of the original raster image.
 
-By storing base-level(tiles of the originial raster is considered as on level zero) tiles in a tile stack, the TileMapBuilder class scans a square region, which has a side length of 2^n tiles, in the Z-curve order. It is checked recursively that, as soon as there are four tiles from the same level in the tile stack, TileMapBuilder pops them out and try to merge them into a upper-level tile using resampling methods like Bilinear Interpolation. The four tiles will then be written to disk and their merging product will be pushed into the stack. TileMapBuilder guarantees that no more than three tiles from the same level live in the memory at the same time. This is how it keeps memory consumption in a controllable and acceptable range.
+The core concept of the algorithm is never reading the same tile twice from the disk. Based on that, with a little more consumption of memory, it eliminates the reading actions (from the disk) when merging lower-level tiles into an upper-level one. Building tiled pyramid is an IO-intensive task, so the actual speed-up is remarkable.
+
+Tiles from each level are stored in a tile stack. The TileMapBuilder class scans a square region, which has a side length of 2^n tiles, in the __Z-curve order__. It is checked recursively that, as soon as there are four tiles from the same level on top of the tile stack, TileMapBuilder pops them out and try to merge them into a upper-level tile using resampling methods like Bilinear Interpolation. The four tiles will then be written to disk and their merging product will be pushed into the stack. TileMapBuilder guarantees that no more than three tiles from the same level live in the memory at the same time. This is how it keeps memory consumption in a controllable and acceptable range.
 
 ## Parallel Strategy
 
-The entile tiling task is divided into several TileMapBuilder's work. TileMapScheduler class determines the best logical pyramid level to assign the building tasks according to threads available. Each of the TileMapBuilder takes care of a tile in the best level(builder level) and all its sub tiles down the quadtree. When the builders returns, the TileMapScheduler launches another builder on the top level to finish building the tiled pyramid in a single thread, if the user-specified level is higher enough.
+The entile tiling task is divided into several TileMapBuilders' work. TileMapScheduler class determines the best logical pyramid level to assign the building tasks according to threads available. Each of the TileMapBuilder takes care of a tile in the best level(builder level) and all its sub tiles down the quadtree. When the builders returns, the TileMapScheduler launches another builder on the top level to finish building the tiled pyramid in a single thread, if the user-specified level is higher enough.
 
 ## Implementation Techniques
 
@@ -28,7 +30,7 @@ Platform: My Laptop...
 | Compiler | MSVC 2019 |
 
 
-### GaoFen Six (Satellite) - Raster(resampled) 60469 * 56563, 3 bands, 8 bit.
+### GaoFen Six (Satellite) - Raster(resampled) 9.55GB - 60469 * 56563, 3 bands, 8 bit.
 Building tiled pyramid to the top level.
 
 | Tile Size | Threads Num | Elapsed Time(s) |
