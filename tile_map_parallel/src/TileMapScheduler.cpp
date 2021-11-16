@@ -78,11 +78,17 @@ void TileMapScheduler::run() {
         libmorton::morton2D_64_decode(i, x, y);
 
         // Determine if the tile exists
-        if (x < (uint_fast32_t)builderLevel.tileNumX && y < (uint_fast32_t)builderLevel.tileNumY) {
+        if (x < static_cast<uint_fast32_t>(builderLevel.tileNumX) &&
+            y < static_cast<uint_fast32_t>(builderLevel.tileNumY)) {
             // Initialize accessor from a copy of main accessor
             accessors[i] = new TileDatasetAccessor(*pAccessor);
             // Initialize builder
-            builders[i] = new TileMapBuilder(x, y, builderLevelIndex, topLevelIndex, 0, accessors[i]);
+            builders[i] = new TileMapBuilder(
+                x, y,
+                builderLevelIndex,
+                topLevelIndex,
+                0,
+                accessors[i]);
             // Run builder
             builders[i]->run();
         }

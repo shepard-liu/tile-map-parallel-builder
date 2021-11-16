@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RasterMeta">
+    <Position X="7.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAQgQAAAAAAEAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>src\RasterMeta.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile">
+    <Position X="17" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QCAAAgAAAIKAAAQASAAAAAAEQAAAYAAAAAAAACBAQQA=</HashCode>
+      <FileName>src\Tile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileAccessor">
+    <Position X="12.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACABAAAAAABAAAIGAAAAAAAAgJIIAAAAgIIIAAAE=</HashCode>
+      <FileName>src\TileAccessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileDatasetAccessor">
+    <Position X="13.75" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACQAIAAAAAAAAAAACAAAAAAAAAAAAAAAoIQAAAAA=</HashCode>
+      <FileName>src\TileDatasetAccessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileMapBuilder">
+    <Position X="5.25" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAgAAAAIAIALAQAAQAAAAIgAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\TileMapBuilder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileMapScheduler">
+    <Position X="2.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAgAABAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>src\TileMapScheduler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileMemoryAccessor">
+    <Position X="10.75" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAgIABAAAA=</HashCode>
+      <FileName>src\TileMemoryAccessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TilePyramidLevel">
+    <Position X="2.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEIAAAgAAAAAIAABAAAEAAgAABAAAAAACAEAAE=</HashCode>
+      <FileName>src\TilePyramidLevel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileResampler">
+    <Position X="5.5" Y="5.75" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="TileResampler::ResampleAlgorithm" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\TileResampler.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAABAABAAAACAAAAAAIAA=</HashCode>
+      <FileName>src\TileResampler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TileStackElement">
+    <Position X="8" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAABgAABAAAA=</HashCode>
+      <FileName>src\TileMapBuilder.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

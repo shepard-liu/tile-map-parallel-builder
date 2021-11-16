@@ -178,6 +178,9 @@
     <ClCompile Include="src\TileMemoryAccessor.cpp" />
     <ClCompile Include="src\TileResampler.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

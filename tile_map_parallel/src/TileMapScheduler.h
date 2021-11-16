@@ -7,7 +7,7 @@
 
 /**
  * TileMapScheduler first calculates the tiles information of
- * each builderLevelIndex using TileDatasetAccessor(TilePyramidLevel). Then breaks
+ * each level using TileDatasetAccessor(TilePyramidLevel). Then breaks
  * an appropriate builderLevelIndex into several independent tiles according
  * to the maximum available threads number, enabling the TileMapBuilder
  * instance to build the tiled pyramid for each tile region. Finally it
