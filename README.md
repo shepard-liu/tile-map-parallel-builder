@@ -14,14 +14,6 @@ Tiles from each level are stored in a tile stack. The TileMapBuilder class scans
 
 The entile tiling task is divided into several TileMapBuilders' work. TileMapScheduler class determines the best logical pyramid level to assign the building tasks according to threads available. Each of the TileMapBuilder takes care of a tile in the best level(builder level) and all its sub tiles down the quadtree. When the builders returns, the TileMapScheduler launches another builder on the top level to finish building the tiled pyramid in a single thread, if the user-specified level is higher enough.
 
-## Implementation Techniques
-
-To be continued...
-
-## Further thinking
-
-What if implement it with Node.js? It seems that Node is expert in IO-intensive programming.
-
 ## Parallel building test results
 
 Platform: My Laptop...
